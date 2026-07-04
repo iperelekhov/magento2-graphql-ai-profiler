@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\GraphQl\Query\ResolverInterface">
+        <plugin name="prlkhv_graphql_ai_profiler_resolver"
+                type="Prlkhv\GraphQlAiProfiler\Plugin\ResolverPlugin"
+                sortOrder="1"/>
+    </type>
+    <type name="Magento\Framework\GraphQl\Query\Resolver\BatchResolverInterface">
+        <plugin name="prlkhv_graphql_ai_profiler_batch_resolver"
+                type="Prlkhv\GraphQlAiProfiler\Plugin\BatchResolverPlugin"
+                sortOrder="1"/>
+    </type>
+    <type name="Magento\Framework\GraphQl\Query\QueryProcessor">
+        <plugin name="prlkhv_graphql_ai_profiler_response_injector"
+                type="Prlkhv\GraphQlAiProfiler\Plugin\ResponseInjectorPlugin"
+                sortOrder="1"/>
+    </type>
+    <type name="Magento\Framework\DB\Adapter\Pdo\Mysql">
+        <plugin name="prlkhv_graphql_ai_profiler_db_adapter"
+                type="Prlkhv\GraphQlAiProfiler\Plugin\DbAdapterPlugin"
+                sortOrder="1"/>
+    </type>
+</config>

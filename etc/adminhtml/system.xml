@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="dev">
+            <group id="graphql_profiler" translate="label" type="text" sortOrder="900" showInDefault="1"
+                    showInWebsite="0" showInStore="0">
+                <label>GraphQL Profiler</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Never enable in production. Also requires dev mode and the secret header.</comment>
+                </field>
+                <field id="mode_allowlist" translate="label" type="text" sortOrder="20" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Deployment Mode Allowlist</label>
+                    <comment>Comma-separated. Default: developer.</comment>
+                </field>
+                <field id="secret" translate="label" type="obscure" sortOrder="40" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Activation Secret</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                    <comment>Compared against the X-GraphQl-Profiler request header via hash_equals().</comment>
+                </field>
+                <field id="sql_statement_max_length" translate="label" type="text" sortOrder="50" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>SQL Statement Max Length</label>
+                    <comment>db.statement is truncated to this many characters. Default 2000.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

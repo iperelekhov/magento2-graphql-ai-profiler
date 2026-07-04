@@ -1,0 +1,43 @@
+{
+    "name": "prlkhv/module-graphql-ai-profiler",
+    "description": "Server-side GraphQL profiler for Magento 2 that injects an OTLP-shaped (or compact AI-friendly) span tree of resolvers and SQL into extensions.profiling. Ships a Claude Code skill for AI-assisted 'why is this request slow' analysis.",
+    "type": "magento2-module",
+    "license": "LicenseRef-Elastic-License-2.0",
+    "keywords": [
+        "magento",
+        "magento2",
+        "magento2-module",
+        "graphql",
+        "profiler",
+        "performance",
+        "otlp",
+        "opentelemetry",
+        "n+1",
+        "debugging",
+        "claude"
+    ],
+    "homepage": "https://github.com/iperelekhov/module-graphql-ai-profiler",
+    "authors": [
+        {
+            "name": "Ivan Perelekhov",
+            "email": "iperelekhov@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/iperelekhov/module-graphql-ai-profiler/issues",
+        "source": "https://github.com/iperelekhov/module-graphql-ai-profiler"
+    },
+    "require": {
+        "php": "~8.1.0||~8.2.0||~8.3.0",
+        "magento/framework": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Prlkhv\\GraphQlAiProfiler\\": ""
+        }
+    }
+}

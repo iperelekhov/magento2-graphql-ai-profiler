@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <dev>
+            <graphql_profiler>
+                <enabled>0</enabled>
+                <secret/>
+                <mode_allowlist>developer</mode_allowlist>
+                <sql_statement_max_length>2000</sql_statement_max_length>
+            </graphql_profiler>
+        </dev>
+    </default>
+</config>
