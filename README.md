@@ -1,5 +1,11 @@
 # Prlkhv_GraphQlAiProfiler
 
+# Why is this exists
+
+No one longer want to read a lot of profiler data and dig into performance traces to find out why is this request slow.
+Another fact, almost everyone use AI tools to explain their profile result.
+Soooo, I decided to remove this annoying step with copy-pasting profile result to your AI assistant with this tool
+
 Server-side GraphQL profiler for Magento 2. It instruments GraphQL execution,
 builds an in-memory span tree (every resolver + every SQL query), and injects it
 into the GraphQL response under `extensions.profiling` — OTLP-shaped, or a compact
